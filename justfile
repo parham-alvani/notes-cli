@@ -19,10 +19,9 @@ ruff-format *args:
 ruff-check *args:
     uv run ruff check --preview {{ args }}
 
-# run django tests
+# run tests
 test *args: sync
-    uv run coverage run manage.py test {{ args }}
-    uv run coverage report
+    uv run pytest {{ args }}
 
 # install all dependencies
 sync:
