@@ -19,9 +19,7 @@ class TestMarkdownLinkUpdating:
             original_path = tmpdir_path / "original.png"
             optimized_path = tmpdir_path / "optimized.png"
 
-            update_markdown_files(
-                [(original_path, optimized_path, [md_file])], dry_run=False
-            )
+            update_markdown_files([(original_path, optimized_path, [md_file])], dry_run=False)
 
             content = md_file.read_text(encoding="utf-8")
             assert "uploads/optimized.png" in content
@@ -37,9 +35,7 @@ class TestMarkdownLinkUpdating:
             original_path = tmpdir_path / "original.png"
             optimized_path = tmpdir_path / "optimized.png"
 
-            update_markdown_files(
-                [(original_path, optimized_path, [md_file])], dry_run=False
-            )
+            update_markdown_files([(original_path, optimized_path, [md_file])], dry_run=False)
 
             content = md_file.read_text(encoding="utf-8")
             assert "uploads/optimized.png" in content
@@ -55,9 +51,7 @@ class TestMarkdownLinkUpdating:
             original_path = tmpdir_path / "original.png"
             optimized_path = tmpdir_path / "optimized.png"
 
-            update_markdown_files(
-                [(original_path, optimized_path, [md_file])], dry_run=False
-            )
+            update_markdown_files([(original_path, optimized_path, [md_file])], dry_run=False)
 
             content = md_file.read_text(encoding="utf-8")
             assert "/uploads/optimized.png" in content
@@ -73,9 +67,7 @@ class TestMarkdownLinkUpdating:
             original_path = tmpdir_path / "original.png"
             optimized_path = tmpdir_path / "optimized.png"
 
-            update_markdown_files(
-                [(original_path, optimized_path, [md_file])], dry_run=False
-            )
+            update_markdown_files([(original_path, optimized_path, [md_file])], dry_run=False)
 
             content = md_file.read_text(encoding="utf-8")
             assert "[[uploads/optimized.png]]" in content
@@ -91,9 +83,7 @@ class TestMarkdownLinkUpdating:
             original_path = tmpdir_path / "original.png"
             optimized_path = tmpdir_path / "optimized.png"
 
-            update_markdown_files(
-                [(original_path, optimized_path, [md_file])], dry_run=False
-            )
+            update_markdown_files([(original_path, optimized_path, [md_file])], dry_run=False)
 
             content = md_file.read_text(encoding="utf-8")
             assert "![[uploads/optimized.png]]" in content
@@ -109,9 +99,7 @@ class TestMarkdownLinkUpdating:
             original_path = tmpdir_path / "original.png"
             optimized_path = tmpdir_path / "optimized.png"
 
-            update_markdown_files(
-                [(original_path, optimized_path, [md_file])], dry_run=False
-            )
+            update_markdown_files([(original_path, optimized_path, [md_file])], dry_run=False)
 
             content = md_file.read_text(encoding="utf-8")
             assert "[[uploads/optimized.png|My Image]]" in content
@@ -127,9 +115,7 @@ class TestMarkdownLinkUpdating:
             original_path = tmpdir_path / "original.png"
             optimized_path = tmpdir_path / "optimized.png"
 
-            update_markdown_files(
-                [(original_path, optimized_path, [md_file])], dry_run=False
-            )
+            update_markdown_files([(original_path, optimized_path, [md_file])], dry_run=False)
 
             content = md_file.read_text(encoding="utf-8")
             assert "![[uploads/optimized.png|My Image]]" in content
@@ -145,9 +131,7 @@ class TestMarkdownLinkUpdating:
             original_path = tmpdir_path / "original.png"
             optimized_path = tmpdir_path / "optimized.png"
 
-            update_markdown_files(
-                [(original_path, optimized_path, [md_file])], dry_run=False
-            )
+            update_markdown_files([(original_path, optimized_path, [md_file])], dry_run=False)
 
             content = md_file.read_text(encoding="utf-8")
             assert "![alt text](uploads/optimized.png)" in content
@@ -166,9 +150,7 @@ class TestMarkdownLinkUpdating:
             original_path = tmpdir_path / "original.png"
             optimized_path = tmpdir_path / "optimized.png"
 
-            update_markdown_files(
-                [(original_path, optimized_path, [md_file])], dry_run=False
-            )
+            update_markdown_files([(original_path, optimized_path, [md_file])], dry_run=False)
 
             content = md_file.read_text(encoding="utf-8")
             assert "![img1](uploads/optimized.png)" in content
@@ -267,9 +249,7 @@ class TestMarkdownLinkUpdating:
             original_path = tmpdir_path / "original.png"
             optimized_path = tmpdir_path / "optimized.png"
 
-            update_markdown_files(
-                [(original_path, optimized_path, [md_file])], dry_run=False
-            )
+            update_markdown_files([(original_path, optimized_path, [md_file])], dry_run=False)
 
             content = md_file.read_text(encoding="utf-8")
             assert "# Header" in content
@@ -289,9 +269,7 @@ class TestMarkdownLinkUpdating:
             original_path = tmpdir_path / "my-image_2024(1).png"
             optimized_path = tmpdir_path / "my-image_2024(1)-opt.png"
 
-            update_markdown_files(
-                [(original_path, optimized_path, [md_file])], dry_run=False
-            )
+            update_markdown_files([(original_path, optimized_path, [md_file])], dry_run=False)
 
             content = md_file.read_text(encoding="utf-8")
             assert "uploads/my-image_2024(1)-opt.png" in content
