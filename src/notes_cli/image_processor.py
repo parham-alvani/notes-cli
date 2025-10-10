@@ -162,7 +162,6 @@ def convert_and_optimize(
 
 def optimize_images(
     referenced_images_with_refs: list[tuple[Path, list[Path]]],
-    uploads_dir: Path,
     dry_run: bool = False,
 ) -> list[tuple[Path, Path, list[Path]]]:
     """Optimize all referenced images, naming them after the markdown files.

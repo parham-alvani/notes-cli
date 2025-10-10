@@ -71,7 +71,7 @@ def main() -> None:
     unreferenced_count = remove_unreferenced_images(unreferenced_images, args.dry_run)
 
     # Step 2: Optimize referenced images (named after markdown files)
-    optimized_mapping = optimize_images(referenced_images, uploads_dir, args.dry_run)
+    optimized_mapping = optimize_images(referenced_images, args.dry_run)
 
     # Step 3: Update markdown files
     updated_files, updated_refs = update_markdown_files(optimized_mapping, args.dry_run)
