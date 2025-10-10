@@ -35,4 +35,4 @@ line-length = 100
 packages = ["src/notes_cli"]
 
 [dependency-groups]
-dev = ["mypy>=1.18.2", "ruff>=0.14.0", "types-pillow>=10.0.0"]
+dev = ["mypy>=1.18.2", "ruff>=0.14.0", "types-pillow>=10.0.0", "pytest>=8.0.0"]
