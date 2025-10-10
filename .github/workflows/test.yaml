@@ -1,0 +1,28 @@
+---
+name: Continuous Integration
+on: push
+
+jobs:
+  lint:
+    name: Format and liting
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: astral-sh/setup-uv@v6
+        with:
+          activate-environment: true
+      - run: uv sync --all-groups -v
+      - run: mypy .
+      - run: ruff check
+      - run: ruff format --check
+
+  test:
+    name: Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: astral-sh/setup-uv@v6
+        with:
+          activate-environment: true
+      - run: uv sync --dev -v
+      - run: pytest
