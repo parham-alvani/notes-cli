@@ -1,5 +1,9 @@
 # Notes CLI
 
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/parham-alvani/notes-cli/test.yaml?style=for-the-badge&logo=github)
+
+## Introduction
+
 A command-line tool for cleaning up and optimizing images in markdown notes.
 
 ## Features
@@ -84,20 +88,4 @@ Format code with ruff:
 
 ```bash
 ruff format src/notes_cli
-```
-
-## Project Structure
-
-```
-notes-cli/
-├── src/
-│   └── notes_cli/
-│       ├── __init__.py          # Package initialization
-│       ├── main.py              # CLI entry point
-│       ├── core.py              # Core orchestration logic
-│       ├── image_processor.py   # Image optimization functions
-│       ├── markdown_updater.py  # Markdown file update functions
-│       └── utils.py             # Utility functions
-├── pyproject.toml               # Project configuration
-└── README.md                    # This file
 ```
