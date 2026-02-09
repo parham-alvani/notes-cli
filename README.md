@@ -1,6 +1,7 @@
-# Notes CLI
-
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/parham-alvani/notes-cli/test.yaml?style=for-the-badge&logo=github)
+<div align="center">
+   <h1>Notes CLI</h1>
+   <img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/parham-alvani/notes-cli/test.yaml?style=for-the-badge&logo=github">
+</div>
 
 ## Introduction
 
