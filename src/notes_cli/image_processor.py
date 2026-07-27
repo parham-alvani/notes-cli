@@ -155,7 +155,7 @@ def convert_and_optimize(
                 )
             return True
 
-    except Exception as e:
+    except (OSError, ValueError) as e:
         console.print(f"  [red]✗[/red] Error processing {input_path}: {e}")
         return False
 

@@ -25,7 +25,7 @@ def find_referencing_files(image_name: str, markdown_files: list[Path]) -> list[
             content = md_file.read_text(encoding="utf-8")
             if image_name in content:
                 referencing_files.append(md_file)
-        except Exception as e:
+        except (OSError, UnicodeDecodeError) as e:
             console.print(f"[yellow]Warning: Could not read {md_file}: {e}[/yellow]")
     return referencing_files
 
@@ -170,7 +170,7 @@ def update_markdown_files(
                             updated_references += 1
                             updated_files_set.add(md_file)
 
-                except Exception as e:
+                except (OSError, UnicodeDecodeError) as e:
                     console.print(f"  [red]✗[/red] Error updating {md_file}: {e}")
 
             progress.advance(task)
